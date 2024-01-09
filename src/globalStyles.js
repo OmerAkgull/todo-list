@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
   box-sizing: border-box;
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
 }
 body {
+  background-image: url("../public/background.jpeg");
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
@@ -16,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Tektur', sans-serif;
+  color: white;
 }
 img, picture, video, canvas, svg {
   display: block;
