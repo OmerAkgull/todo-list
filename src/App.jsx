@@ -3,6 +3,11 @@ import styled from "styled-components";
 import { useState } from "react";
 import "./app.css"
 
+const Title = styled.h1`
+font-size: 4rem;
+  margin: 40px;`
+
+
 function App() {
   const [todoInput, setTodoInput] = useState("");
   const [todos, setTodos] = useState([
@@ -24,9 +29,6 @@ function App() {
     setTodos(newTodos)
   }
 
-  const Title = styled.h1`
-  font-size: 4rem;
-    margin: 40px;`
 
   return (
     <>

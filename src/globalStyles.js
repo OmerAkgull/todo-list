@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
 }
 body {
-  background-image: url("../public/background.jpeg");
+  background-image: url("./background.jpeg");
+  background-size:cover;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
