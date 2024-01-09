@@ -59,8 +59,8 @@ button:hover {
 
 .title-container {
   background: rgb(10, 88, 75);
-  background: radial-gradient(
-    circle,
+  background: linear-gradient(
+    0deg,
     rgba(10, 88, 75, 1) 0%,
     rgba(222, 102, 88, 1) 71%
   );
