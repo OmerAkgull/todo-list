@@ -1,4 +1,5 @@
 import { GlobalStyle } from "./globalStyles";
+import styled from "styled-components";
 import { useState } from "react";
 import "./app.css"
 
@@ -23,11 +24,14 @@ function App() {
     setTodos(newTodos)
   }
 
+  const Title = styled.h1`
+  font-size: 4rem;
+    margin: 40px;`
 
   return (
     <>
       <GlobalStyle />
-      <h1>To-Do List</h1>
+      <Title>To-Do List</Title>
       <form>
         <label htmlFor="todoInput">Goals</label>
         <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
