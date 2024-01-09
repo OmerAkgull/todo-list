@@ -10,15 +10,17 @@ function App() {
   const listItems = todos.map((goal, index) => <li key={index}>{goal}</li>);
  
 
-  function addToDo() {
+  function addToDo(e) {
+    e.preventDefault();
     setTodos([...todos, todoInput]);
+    setTodoInput("");
   }
 
   return (
     <>
       <GlobalStyle />
       <form>
-        <label htmlFor="#todoInput">Hedef</label>
+        <label htmlFor="todoInput">Hedef</label>
         <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
         <button onClick={addToDo}>Add</button>
       </form>
