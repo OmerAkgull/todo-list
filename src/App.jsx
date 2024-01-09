@@ -11,7 +11,7 @@ function App() {
  
 
   function addToDo() {
-    setTodos(...todos, todoInput);
+    setTodos([...todos, todoInput]);
   }
 
   return (
@@ -19,7 +19,7 @@ function App() {
       <GlobalStyle />
       <form>
         <label htmlFor="#todoInput">Hedef</label>
-        <input value={todoInput} onChange={setTodoInput} id="todoInput"></input>
+        <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
         <button onClick={addToDo}>Add</button>
       </form>
       <ul>{listItems}</ul>
