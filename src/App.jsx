@@ -33,7 +33,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Title>To-Do List</Title>
+      <div className="title-container">
+      <Title>To-Do List</Title> </div>
       <form>
         <label htmlFor="todoInput">Goals</label>
         <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
