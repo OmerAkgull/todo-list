@@ -8,13 +8,19 @@ function App() {
     "Proje üzerine çalış",
     "TypeScript öğren",
   ]);
-  const listItems = todos.map((goal, index) => <li key={index}>{goal}</li>);
+  const listItems = todos.map((goal, index) => <li key={index} onClick={()=> removeToDo(index)}>{goal}</li>);
  
 
   function addToDo(e) {
     e.preventDefault();
     setTodos([...todos, todoInput]);
     setTodoInput("");
+  }
+
+  function removeToDo(index) {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos)
   }
 
 
