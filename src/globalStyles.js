@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Tektur', sans-serif;
 }
 img, picture, video, canvas, svg {
   display: block;

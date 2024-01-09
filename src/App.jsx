@@ -5,8 +5,8 @@ import "./app.css"
 function App() {
   const [todoInput, setTodoInput] = useState("");
   const [todos, setTodos] = useState([
-    "Proje üzerine çalış",
-    "TypeScript öğren",
+    "Work on a project",
+    "Learn TypeScript",
   ]);
   const listItems = todos.map((goal, index) => <li key={index} onClick={()=> removeToDo(index)}>{goal}</li>);
  
@@ -27,6 +27,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <h1>To-Do List</h1>
       <form>
         <label htmlFor="todoInput">Goals</label>
         <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
