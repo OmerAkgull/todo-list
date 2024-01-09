@@ -1,5 +1,6 @@
 import { GlobalStyle } from "./globalStyles";
 import { useState } from "react";
+import "./app.css"
 
 function App() {
   const [todoInput, setTodoInput] = useState("");
@@ -16,15 +17,16 @@ function App() {
     setTodoInput("");
   }
 
+
   return (
     <>
       <GlobalStyle />
       <form>
-        <label htmlFor="todoInput">Hedef</label>
+        <label htmlFor="todoInput">Goals</label>
         <input value={todoInput} onChange={(e)=> setTodoInput(e.target.value)} id="todoInput"></input>
         <button onClick={addToDo}>Add</button>
       </form>
-      <ul>{listItems}</ul>
+      <ul className="todoList">{listItems}</ul>
     </>
   );
 }
