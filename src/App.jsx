@@ -6,7 +6,7 @@ import "./app.css"
 function App() {
   const [todoInput, setTodoInput] = useState("");
   const [todos, setTodos] = useState([
-    "Work on a project",
+    "Drink more water",
     "Learn TypeScript",
   ]);
   const listItems = todos.map((goal, index) => <li key={index} onClick={()=> removeToDo(index)}>{goal}</li>);
